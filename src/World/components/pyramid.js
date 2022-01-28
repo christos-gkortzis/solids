@@ -2,14 +2,17 @@ import { TetrahedronBufferGeometry, Mesh, MeshStandardMaterial } from 'https://c
 
 function createPyramid() {
   // create a geometry
-  const geometry = new TetrahedronBufferGeometry(2, 0 );
+  const geometry = new TetrahedronBufferGeometry(1, 0 );
 
   // create a Standart material
-  const material = new MeshStandardMaterial();
+  const material = new MeshStandardMaterial({ color: 'blue' });
 
   // create a Mesh containing the geometry and material
   const pyramid = new Mesh(geometry, material);
-
+  pyramid.position.set( 0 , 0.5 , 0);
+  pyramid.rotation.z = -45;
+  
+  pyramid.rotation.x = 90;
   return pyramid;
 }
 

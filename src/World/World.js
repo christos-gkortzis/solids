@@ -4,7 +4,6 @@ import { createScene } from './components/scene.js';
 import { createLights } from './components/lights.js';
 import { createRenderer } from './systems/renderer.js';
 import { Resizer } from './systems/Resizer.js';
-
 // These variables are module-scoped: we cannot access them
 // from outside the module
 let camera;
@@ -23,11 +22,13 @@ class World {
     scene.add(pyramid, light);
 
     const resizer = new Resizer(container, camera, renderer);
+
   }
 
   render() {
     // draw a single frame
     renderer.render(scene, camera);
+
   }
 }
 
