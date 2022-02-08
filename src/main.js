@@ -8,7 +8,7 @@ function main() {
   const world = new World(container);
 
   // start the animation loop
-  world.render();
+  world.start();
 }
 
 main();

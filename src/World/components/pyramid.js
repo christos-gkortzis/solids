@@ -13,6 +13,11 @@ function createPyramid() {
   pyramid.rotation.z = -45;
   
   pyramid.rotation.x = 90;
+
+  pyramid.tick = () => {
+    // increase the cube's rotation each frame
+    pyramid.rotation.y += 0.01;
+  };
   return pyramid;
 }
 
