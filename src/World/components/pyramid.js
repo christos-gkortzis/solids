@@ -1,4 +1,4 @@
-import { TetrahedronBufferGeometry, Mesh, MeshStandardMaterial } from 'https://cdn.skypack.dev/three';
+import { TetrahedronBufferGeometry, Mesh, MeshStandardMaterial, MathUtils } from 'https://cdn.skypack.dev/three';
 
 function createPyramid() {
   // create a geometry
@@ -9,10 +9,10 @@ function createPyramid() {
 
   // create a Mesh containing the geometry and material
   const pyramid = new Mesh(geometry, material);
-  pyramid.position.set( 0 , 0.5 , 0);
-  pyramid.rotation.z = -45;
+  pyramid.position.set( 0 , 0 , 0);
+  pyramid.rotation.z = MathUtils.degToRad(-45);
   
-  pyramid.rotation.x = 90;
+  pyramid.rotation.x = MathUtils.degToRad(145);
 
   pyramid.tick = () => {
     // increase the cube's rotation each frame
